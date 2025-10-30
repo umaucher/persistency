@@ -1,10 +1,6 @@
 [
   {
     "version": "main",
-    "url": "https://umaucher.github.io/inc_mw_per/main/"
-  },
-  {
-    "version": "pr-1",
-    "url": "https://umaucher.github.io/persistency/pr-1/"
+    "url": "https://umaucher.github.io/persistency/main/"
   }
 ]
