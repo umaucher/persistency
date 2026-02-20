@@ -21,43 +21,43 @@ bazel_dep(name = "score_bazel_platforms", version = "0.1.1")
 bazel_dep(name = "score_bazel_cpp_toolchains", version = "0.3.0")
 
 gcc = use_extension("@score_bazel_cpp_toolchains//extensions:gcc.bzl", "gcc", dev_dependency = True)
-
 gcc.toolchain(
     name = "score_gcc_x86_64",
     target_cpu = "x86_64",
     target_os = "linux",
-    version = "12.2.0",
     use_default_package = True,
+    version = "12.2.0",
 )
-
 gcc.toolchain(
     name = "score_qcc_x86_64",
+    sdp_version = "8.0.0",
     target_cpu = "x86_64",
     target_os = "qnx",
-    sdp_version = "8.0.0",
-    version = "12.2.0",
     use_default_package = True,
+    version = "12.2.0",
 )
-
 gcc.toolchain(
     name = "score_qcc_aarch64",
+    sdp_version = "8.0.0",
     target_cpu = "aarch64",
     target_os = "qnx",
-    sdp_version = "8.0.0",
-    version = "12.2.0",
     use_default_package = True,
+    version = "12.2.0",
 )
-
 use_repo(
     gcc,
     "score_gcc_x86_64",
-    "score_qcc_x86_64",
     "score_qcc_aarch64",
+    "score_qcc_x86_64",
 )
 
 bazel_dep(name = "score_persistency", version = "0.3.0")
+
 # only in the intern examle to test the latest local version instead of the latest released one
-local_path_override(module_name = "score_persistency", path = "../")
+local_path_override(
+    module_name = "score_persistency",
+    path = "../",
+)
 
 # inherited deps
 bazel_dep(name = "score_baselibs", version = "0.2.4")
