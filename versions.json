@@ -2,5 +2,9 @@
   {
     "version": "main",
     "url": "https://umaucher.github.io/persistency/main/"
+  },
+  {
+    "version": "v9.9.9-test1",
+    "url": "https://umaucher.github.io/persistency/v9.9.9-test1/"
   }
 ]
